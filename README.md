@@ -110,7 +110,7 @@ minmax(최소값, 최대값)
 
 #### 2.7 auto-fit, auto-fill
 
-reponsive 디자인
+responsive 디자인
 
 - repeat function에만 사용한다.
 - auto-fill은 column이 있는 만큼, 가능한 많이 해당 row를 채운다. 빈 column이 생긴다.
