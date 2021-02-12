@@ -68,7 +68,7 @@ child에게 적용되는 property
 
 #### 2.1 CSS Grid Basic Concepts
 
-flex: grid
+display: grid
 
 - flexbox와 마찬가지로 부모(father)를 grid로 만든다. (규칙은 flexbox와 거의 동일)
 - grid-template-columns(rows)로 원하는 column(row)의 개수와 크기를 적어 나눌 수 있다.
@@ -81,6 +81,37 @@ flex: grid
 
 #### 2.3 Rows and Columns
 
-grid-row-start / grid-row-end / grid-column-start / grid-column-end
+grid-column-start / grid-column-end => grid-column: start / end
+grid-row-start / grid-row-end => grid-row: start / end
+grid-column: (시작 라인지점) / span cell개수
 
 - 시작 줄(start)부터 마지막 줄(end)까지 늘린다.
+- end가 -1이면 마지막 라인을 뜻한다.
+
+#### 2.4 Line Naming
+
+repeat(2, 100px) => [first-line] 100px [second-line] 100px [third-line];
+
+- line마다 이름을 붙여 사용할 수 있다.
+
+#### 2.5 Grid Template
+
+- fr: fraction(부분)으로 pixel이나 %와 같은 측정 단위이다.
+- fr의 개수만큼 grid에서 사용 가능한 공간 크기로 반복한다.
+- height를 정해주지 않으면 1fr은 0이 되며, 화면 크기가 달라져도 비율이 똑같다.
+- grid-template은 grid-area의 이름을 사용하는데 row의 높이를 구체적으로 정해야한다.
+- grid-template에서 repeat는 적용되지 않는다.
+
+#### 2.6 minmax
+
+minmax(최소값, 최대값)
+
+- 얼마나 작게 혹은 크게 element가 될 수 있는지 지정할 수 있다.
+
+#### 2.7 auto-fit, auto-fill
+
+reponsive 디자인
+
+- repeat function에만 사용한다.
+- auto-fill은 column이 있는 만큼, 가능한 많이 해당 row를 채운다. 빈 column이 생긴다.
+- auto-fit은 현재의 element를 쭉 늘려서 row에 딱 맞게 맞춘다.
