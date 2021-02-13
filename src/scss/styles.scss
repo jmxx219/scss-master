@@ -1,0 +1,45 @@
+@import "_variables";
+@import "_mixins";
+@import "_buttons";
+
+a {
+  @extend %button;
+  text-decoration: none;
+}
+button {
+  @extend %button;
+  border: none;
+}
+
+/*
+body {
+  background-color: $bg;
+}
+
+a {
+  margin-bottom: 10px;
+  &:nth-child(odd) {
+    @include link("odd");
+  }
+  &:nth-child(even) {
+    @include link("even");
+  }
+}
+
+h2 {
+  color: green;
+  font-size: $title;
+}
+
+.box {
+  &:hover {
+    background-color: cadetblue;
+  }
+  h2 {
+    color: blue;
+  }
+  button {
+    color: green;
+  }
+}
+*/

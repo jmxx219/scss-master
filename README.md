@@ -81,8 +81,8 @@ display: grid
 
 #### 2.3 Rows and Columns
 
-grid-column-start / grid-column-end => grid-column: start / end
-grid-row-start / grid-row-end => grid-row: start / end
+grid-column-start / grid-column-end => grid-column: start / end <br/>
+grid-row-start / grid-row-end => grid-row: start / end <br/>
 grid-column: (시작 라인지점) / span cell개수
 
 - 시작 줄(start)부터 마지막 줄(end)까지 늘린다.
@@ -108,10 +108,47 @@ minmax(최소값, 최대값)
 
 - 얼마나 작게 혹은 크게 element가 될 수 있는지 지정할 수 있다.
 
-#### 2.7 auto-fit, auto-fill
+#### 2.7 auto-fit, auto-fill / min-content, max-content
 
-responsive 디자인
+responsive 디자인 - auto-fit, auto-fill
 
 - repeat function에만 사용한다.
 - auto-fill은 column이 있는 만큼, 가능한 많이 해당 row를 채운다. 빈 column이 생긴다.
 - auto-fit은 현재의 element를 쭉 늘려서 row에 딱 맞게 맞춘다.
+
+min-content, max-content
+
+- content를 보존하는 방법
+- box를 컨텐츠에 필요한만큼 커지게하고, 컨텐츠가 작아질 수 있는 만큼 작아지게 한다.
+
+## 3. SCSS
+
+#### 3.1 CSS Preprocessors and Set Up
+
+- SCSS는 CSS를 programming language처럼 만든다.
+- SCSS는 sytax를 개선하고 좋은 걸 사용할 수 있다. ex) function, variables, extend ..
+
+gulpfile.babel.js
+
+- gulpfile의 routes를 통해 src 주소 파일(scss파일)에서 일어나는 모든 일은 css로 compile된다.
+- gulpfile에서 styles.css를 바꾸고 index.html이 styles.css를 가리키면서 scss 파일에 적은 모든 내용은 평범한 css로 변환된다. (scss에서 수정된 내용은 css에서도 함께 수정된다.)
+
+- 밑줄(\_)이 있는 파일들은 css로 변하지 않는 것들이다.
+
+#### 3.2 Variables and Nesting
+
+- \_variables.scss파일에서 variable 이름 앞에 $를 넣고 value를 넣어준다.
+- ex) $bg: red;
+- 모든 color, font-size 등등을 variable에 넣을 수 있다.
+- scss 파일에서 .box{ h2{ color: green; } }와 같이 중첩(nesting)이 가능하다.
+
+#### 3.3 Mixins
+
+- 상황에 따라 다르게 코딩하고 싶을 때 사용한다.
+- scss functionality를 재사용할 수 있도록 해준다.
+- program logic을 짤 수 있다. if else ... 사용 가능
+
+#### 3.4 Extends
+
+- 같은 코드를 중복해서 쓰고 싶지 않을 때 사용한다.
+- page에서 분리해야하는 element들이 많을 때 유용하다.
