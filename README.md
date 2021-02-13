@@ -2,6 +2,8 @@
 
 (S)CSS Layout Master: Flexbox & Grid
 
+<br/>
+
 ## 1. FLEXBOX
 
 #### 1.0 Life Before Flexbox
@@ -63,6 +65,7 @@ child에게 적용되는 property
 - flex-basis가 변하지 않으면 flex-basis는 width와 같다.
 - flex-shrink와 flex-grow로 크기가 바뀌게 된다.
 - flex-direction row일 때, main axis(수평)에서 작용한다.
+  <br/><br/>
 
 ## 2. GRID
 
@@ -120,6 +123,7 @@ min-content, max-content
 
 - content를 보존하는 방법
 - box를 컨텐츠에 필요한만큼 커지게하고, 컨텐츠가 작아질 수 있는 만큼 작아지게 한다.
+  <br/><br/>
 
 ## 3. SCSS
 
