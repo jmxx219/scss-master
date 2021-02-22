@@ -1,0 +1,157 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&family=Varela+Round&display=swap");
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(6, 27, 66);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-box {
+  padding: 1.5px;
+  background-color: rgb(38, 84, 102);
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  display: grid;
+  grid-gap: 1.5px;
+  grid-template-rows: 12px 1fr 12px;
+  color: white;
+  font-family: "Varela Round", sans-serif;
+}
+
+.main-header:nth-child(1) {
+  padding-right: 10px;
+}
+
+.main-header {
+  grid-area: main-header;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.marquee span {
+  float: left;
+  width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.main-content {
+  grid-area: main-content;
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-gap: 1.5px;
+  grid-template-columns: 12px 1fr 1fr 12px;
+  grid-template-rows: 5fr 1fr 3fr 1fr;
+  position: relative;
+  z-index: 1;
+}
+
+.main-title {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  position: absolute;
+  z-index: 2;
+  font-family: "Varela Round", sans-serif;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5px;
+}
+
+.vertical {
+  writing-mode: tb-rl;
+  text-orientation: upright;
+}
+
+.main-title-icon {
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+.left-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9.5px;
+  width: 9.5px;
+  font-size: 8px;
+}
+
+.main-footer {
+  grid-area: main-footer;
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.left-content1 {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 1;
+}
+
+.left-content2 {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+  writing-mode: vertical-lr;
+  transform: rotateZ(180deg);
+}
+
+.left-content3 {
+  flex-direction: column;
+  grid-row: 4 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.left-img {
+  grid-row: 1 / span 4;
+  grid-column: 2 / span 1;
+}
+
+.right-img {
+  grid-row: 1 / span 4;
+  grid-column: 3 / span 1;
+}
+
+.right-content1 {
+  grid-row: 1 / span 1;
+  grid-column: 4 / span 1;
+  background-color: #b8a1dd;
+}
+
+.right-content2 {
+  grid-row: 2 / span 3;
+  grid-column: 4 / span 1;
+  background-color: #b8a1dd;
+}
+
+.white {
+  background-color: white;
+  color: rgb(38, 84, 102);
+}
+
+.img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.left-img {
+  background-image: url(https://cdn.pixabay.com/photo/2017/10/12/20/15/photoshop-2845779_1280.jpg);
+}
+
+.right-img {
+  background-image: url(https://cdn.pixabay.com/photo/2020/09/11/17/01/landscape-5563684_1280.jpg);
+}
